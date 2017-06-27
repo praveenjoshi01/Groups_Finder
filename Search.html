@@ -1,0 +1,312 @@
+﻿<!DOCfTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>WhatsApp Groups Finder | Search</title>
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="css/searchPage_Grid.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/searchPage.js"></script>
+
+</head>
+<body background="images\WB.jpg" style="overflow-x: hidden;">
+    <h1 style="text-align: center;"><a href="index.html" style="color: white; text-align: center; text-decoration: none !important;"><b>WhatsApp Groups Finder </a></h1>
+    <!--SEARCHBAR START-->
+    <div class="wrapper container">
+
+        <div class="row">
+            <!-- Modal private -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Private Group - CID Jokes</h4>
+                        </div>
+                        <div class="modal-body">
+                            <label class="filter-col" style="margin-right: 0;" for="pref-subcat">Drop your Name and Phone Number for Admin Review</label>
+                            <div class="row">
+                                <div class="col-md-6" style="margin-top: 1%;">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control input-sm" id="Text1" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6" style="margin-top: 1%;">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control input-sm" id="Text2" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Send</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+              <!-- Modal public -->
+            <div id="myModalPublic" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Public Group - Bhigi Billi</h4>
+                        </div>
+                        <div class="modal-body">
+                            <label class="filter-col" style="margin-right: 0;" for="pref-subcat">Click to join the Group : </label><small class="text-muted">                            <button type="button" class="btn btn-primary">Join Now</button> </small>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 col-md-offset-2" style="margin-top: 1%;">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="x" placeholder="Search WhatsAppGroup...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" style="height: 34px;" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-md-4" style="margin-top: 1%;">
+                <div class="container">
+                    <div class="row">
+
+                        <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#filter-panel">
+                            <span class="glyphicon glyphicon-cog"></span>Advanced Search
+       
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8 col-md-offset-2" style="margin-top: 2%;">
+                <div id="filter-panel" class="collapse filter-panel">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form class="form-inline" role="form">
+                                <div class="row">
+                                    <div class="col-md-6" style="margin-top: 1%;">
+                                        <div class="form-group">
+                                            <label class="filter-col" style="margin-right: 0;" for="pref-cat">Category : </label>
+                                            <input type="text" class="form-control input-sm" id="perf-cat">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" style="margin-top: 1%;">
+                                        <div class="form-group">
+                                            <label class="filter-col" style="margin-right: 0;" for="pref-subcat">Sub-Category:</label>
+                                            <input type="text" class="form-control input-sm" id="pref-subcat">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6" style="margin-top: 1%;">
+                                        <div class="form-group">
+                                            <label class="filter-col" style="margin-right: 0;" for="pref-loca">Location :</label>
+                                            <input type="text" class="form-control input-sm" id="perf-loca">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" style="margin-top: 1%;">
+                                        <div class="form-group">
+                                            <label class="filter-col" style="margin-right: 0;" for="pref-subloca">Sub-Location:</label>
+                                            <input type="text" class="form-control input-sm" id="pref-subloca">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- form group [rows] -->
+
+                                <!-- form group [rows] -->
+
+                                <!-- form group [rows] -->
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--SEARCHBAR ENDS-->
+    <!--GRID START-->
+    <div class="wrapper container">
+        <div class="row">
+            <section class="content">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <!-- <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-success btn-filter" data-target="pagado">Pagado</button>
+                                    <button type="button" class="btn btn-warning btn-filter" data-target="pendiente">Pendiente</button>
+                                    <button type="button" class="btn btn-danger btn-filter" data-target="cancelado">Cancelado</button>
+                                    <button type="button" class="btn btn-default btn-filter" data-target="all">Todos</button>
+                                </div>
+                            </div>-->
+                            <div class="table-container">
+                                <table class="table table-filter">
+                                    <tbody>
+                                        <tr data-status="pagado">
+                                            <td data-toggle="modal" data-target="#myModal">
+                                                <a href="javascript:;" class="">
+                                                    <i class="glyphicon glyphicon-plus"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="star">
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <div class="media">
+                                                    <a href="#" class="pull-left">
+                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <span class="media-meta pull-right">Febrero 13, 2016</span>
+                                                        <h4 class="title">CID Jokes <i class="ion-locked"></i>
+                                                            <span class="pull-right pagado">Active</span>
+                                                        </h4>
+                                                        <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr data-status="pendiente">
+                                            <td data-toggle="modal" data-target="#myModalPublic">
+                                                <a href="javascript:;" class="">
+                                                    <i class="glyphicon glyphicon-plus"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="star">
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <div class="media">
+                                                    <a href="#" class="pull-left">
+                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <span class="media-meta pull-right">Febrero 13, 2016</span>
+                                                        <h4 class="title">Bhigi Billi 
+                                                            <span class="pull-right pendiente">In Progress</span>
+                                                        </h4>
+                                                        <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr data-status="cancelado">
+                                            <td>
+                                                <a href="javascript:;" class="">
+                                                    <i class="glyphicon glyphicon-plus"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="star">
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <div class="media">
+                                                    <a href="#" class="pull-left">
+                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <span class="media-meta pull-right">Febrero 13, 2016</span>
+                                                        <h4 class="title">Save Earth A_Mailbox.html
+                                                            <span class="pull-right cancelado">InActive</span>
+                                                        </h4>
+                                                        <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr data-status="pagado" class="selected">
+                                            <td>
+                                                <a href="javascript:;" class="">
+                                                    <i class="glyphicon glyphicon-plus"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="star star-checked">
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <div class="media">
+                                                    <a href="#" class="pull-left">
+                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <span class="media-meta pull-right">Febrero 13, 2016</span>
+                                                        <h4 class="title">Full Metal Alchemist <i class="ion-locked"></i>
+                                                            <span class="pull-right pagado">Acitve</span>
+                                                        </h4>
+                                                        <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr data-status="pendiente">
+                                            <td>
+                                                <a href="javascript:;" class="">
+                                                    <i class="glyphicon glyphicon-plus"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="javascript:;" class="star">
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <div class="media">
+                                                    <a href="#" class="pull-left">
+                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <span class="media-meta pull-right">Febrero 13, 2016</span>
+                                                        <h4 class="title">No Love A_Mailbox.html
+                                                            <span class="pull-right pendiente">In Progress</span>
+                                                        </h4>
+                                                        <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!--GRID END-->
+</body>
+</html>
